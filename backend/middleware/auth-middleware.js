@@ -20,7 +20,7 @@ const protect = asyncHandler(async (req, res, next) => {
             res.status(401);
             throw new Error("User not found!");
         }    
-        req.userId = user._id
+        req.user = user
 
         next();
     } catch (error) {
